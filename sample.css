@@ -1,0 +1,1040 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.logo {
+    padding: 20px;
+}
+
+.logo h5 {
+    color: #FFF;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.logo h4 {
+    color: #FFF;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 125%;
+}
+
+.sideBar hr {
+    background: rgba(255, 255, 255, 0.17);
+    height: 3px;
+    margin: 0;
+}
+
+.mainSection {
+    display: flex;
+    height: 100vh;
+}
+
+.sideBar {
+    /* height: fit-content; */
+    background: linear-gradient(150deg, #301F81 12.51%, #0F0441 89.53%);
+}
+
+/* .dashboardEmployee{
+    padding: 20px;
+} */
+.dashboardEmployee ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    /* margin-bottom: 326px; */
+}
+
+.dashboardEmployee li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 20px;
+}
+
+.dashboardEmployee i {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+.dashboardEmployee a {
+    text-decoration: none;
+}
+
+.dashboardEmployee a:hover {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.13);
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    vertical-align: middle;
+}
+
+.dashboardEmployee a:active {
+    border-left: 2px solid;
+    border-color: #1890FF;
+
+}
+
+.dashboardEmployee li span {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 16px;
+    text-decoration: none;
+
+
+}
+
+.companyLogo {
+    display: flex;
+    align-items: center;
+    border-color: rgba(0, 0, 0, 0.17);
+    position: fixed;
+    width: 100%;
+    gap: 10px;
+    border-top: 1px inset;
+    bottom: 0;
+    padding: 20px;
+}
+
+.companyLogo span {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.companyLogo img {
+    width: 83px;
+
+}
+
+.sideFooter {
+    /* padding-top: 355px; */
+}
+
+/* hgsdiuagasiud */
+
+.userLogo {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstPara {
+    color: var(--secondary-grey-700, #707EAE);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+
+}
+
+.employeeDetails.col-10 {
+    background: var(--secondary-grey-300, #F4F7FE);
+}
+
+.secondPara {
+    color: #2B3674;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: -0.68px;
+}
+
+/* .userDetailHeading {
+    padding: 20px;
+} */
+
+.userDetailHeading.col-12 {
+    display: flex;
+    padding: 20px;
+
+}
+
+.userSearchBar.col-6 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-container {
+
+    position: relative;
+    background-color: #FFFFFF;
+    width: 346px;
+    border-radius: 50px;
+    padding: 12px 20px;
+}
+
+.search-container input[type="text"] {
+    padding-left: 46px;
+    border: none;
+    color: #8F9BBA;
+    font-size: 15px;
+    background-color: #F4F7FE;
+    border-radius: 50px;
+    width: 214px;
+    height: 41.34px;
+    flex-shrink: 0;
+}
+
+.search-container::before {
+    content: "\f002";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2B3674;
+}
+
+.userImg {
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    border-radius: 43px;
+    right: 21px;
+    top: 8px;
+    background-color: transparent;
+}
+
+.userImg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.fa-bell:before {
+    font-size: 20px;
+    padding-left: 9px;
+    color: #A3AED0;
+}
+
+.userDetailsFooter {
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    gap: 750px;
+    bottom: 0;
+
+
+
+}
+
+.termsAndPrivacy {
+    display: flex;
+}
+
+.rightsReserved {
+    display: flex;
+    flex: 1;
+}
+
+.rightsReserved span {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+    letter-spacing: -0.28px;
+}
+
+.privacyPolicy {
+    padding-left: 20px;
+}
+
+.privacyPolicy span {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+    letter-spacing: -0.28px;
+}
+
+.terms span {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+    letter-spacing: -0.28px;
+}
+
+.userViewForm {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 60%;
+    margin: auto;
+    height: 70vh;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+.userViewForm::-webkit-scrollbar {
+    display: none;
+}
+
+.userBackgroundImage.col-12 img {
+    width: 100%;
+}
+
+.userProfilePicture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #FFF;
+    position: relative;
+    left: 41%;
+    margin-top: -62px;
+    padding: 5px;
+}
+
+.userProfilePicture img {
+    width: 100%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #FFF;
+    position: relative;
+    left: -4%;
+    margin-top: -5px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.userNameInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userNameInfo span {
+    color: #2B3674;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* 160% */
+    letter-spacing: -0.4px;
+}
+
+.userNameInfo .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 171.429% */
+    letter-spacing: -0.28px;
+}
+
+.userFirstRow {
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center; */
+    display: flex;
+
+}
+
+.employeeGender {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 16px;
+    background: var(--secondary-primary-white, #FFF);
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
+}
+
+.employeeGender span {
+    color: #2B3674;
+    font-size: 16px;
+    gap: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+
+}
+
+.employeeGender .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: -0.28px;
+
+}
+
+.employeeAge {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--secondary-primary-white, #FFF);
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.employeeAge span {
+    color: #2B3674;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+
+}
+
+.employeeAge .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: -0.28px;
+
+}
+
+.employeeDob {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--secondary-primary-white, #FFF);
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.employeeDob span {
+    color: #2B3674;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+
+}
+
+.employeeDob .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: -0.28px;
+
+}
+.SecondRow.col-12.my-3{
+    display: flex;
+    gap: 30px;
+}
+.employeeMobileNumber{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--secondary-primary-white, #FFF);
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.employeeMobileNumber span {
+    color: #2B3674;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+
+}
+
+.employeeMobileNumber .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: -0.28px;
+
+}
+.employeeQualification{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--secondary-primary-white, #FFF);
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
+}
+.employeeQualification span {
+    color: #2B3674;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+
+}
+
+.employeeQualification .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: -0.28px;
+
+}
+.ThirdRow.col-12.my-3{
+    display: flex;
+    gap: 30px;
+}
+.employeeAddress{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--secondary-primary-white, #FFF);
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.employeeAddress span {
+    color: #2B3674;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+
+}
+
+.employeeAddress .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: -0.28px;
+
+}
+.employeeUsername{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--secondary-primary-white, #FFF);
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.employeeUsername span {
+    color: #2B3674;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: -0.32px;
+
+}
+
+.employeeUsername .dull {
+    color: #707EAE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    letter-spacing: -0.28px;
+
+}
+.btn.btn-delete.me-md-2{
+    background-color: #EB506C;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.btn.btn-delete.me-md-2:hover{
+    background-color: #f40934;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.btn.btn-edit.me-md-2{
+    background-color: #4318FF;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.btn.btn-edit.me-md-2:hover{
+    background-color: #1d0390;
+    color: #FFFFFF;
+}
+/* delete employee popup */
+
+.deleteEmployePopup {
+    border-radius: 22px;
+    background: #fff;
+    padding: 20px;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 692px;
+    z-index: 1;
+    display: none;
+}
+
+.deleteEmployePopup .col-12 {
+    display: flex;
+    align-items: center;
+}
+
+.deleteEmployePopup span {
+    color: #2B3674;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* 133.333% */
+    letter-spacing: -0.48px;
+}
+
+.icon.col-6 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.deleteEmployePopup p {
+    color: #2B3674;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn.btn-cancel.me-md-2 {
+    color: #2B3674;
+    font-weight: 600;
+}
+
+.btn.btn-delete.me-md-2 {
+    background-color: #EB506C;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.btn.btn-delete.me-md-2:hover {
+    background-color: #f40934;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.overlay{
+    
+    background: rgba(5, 3, 16, 0.80);
+    height: 100vh;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+
+}
+/*          Edit Employee        */
+
+.formEditEmployee {
+    width: 750px;
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+    padding: 25px;
+    left: 28%;
+    top: 20px;
+    position: absolute;
+    flex-shrink: 0;
+    border-radius: 22px;
+    background: #fff;
+    z-index: 1;
+    overflow-y: scroll;
+    display: none;
+}
+.formEditEmployee p{
+    color: red;
+    font-size: 13px;
+    margin-left: 5px;
+
+}
+.formEditEmployee::-webkit-scrollbar {
+    display: none;
+}
+
+.editEmployeeChangeImage {
+    border: none;
+
+}
+
+.editEmployeeChangeImage img {
+    width: 130px;
+    height: 140px;
+    border-radius: 15%;
+}
+
+/* .cardImg.col-2.my-4 {
+    
+    padding: 10px;
+    width: 150px;
+    border-radius: 50;
+    color: #A3AED0;
+} */
+
+.cardImageSection {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn.btn-imgChange {
+    background-color: #EAE6FB;
+    color: #4318FF;
+    font-weight: 700;
+    padding: 0px 32px;
+    border-radius: 13px;
+    height: 50px;
+}
+
+.btn.btn-imgChange:hover {
+    background-color: #dad3f9;
+    color: #4318FF;
+}
+
+nav {
+    position: absolute;
+    right: 30px;
+    bottom: 55px;
+}
+/* add employee form */
+.formUpload {
+    width: 50%;
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    left: 25%;
+    top: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    border-radius: 22px;
+    background: #fff;
+    z-index: 1;
+    overflow-y: scroll;
+    display: none;
+    
+
+
+}
+.formUpload p{
+    color: red;
+    font-size: 13px;
+    margin-left: 5px;
+
+}
+
+
+.addEmployeForm.col-12 {
+    display: flex;
+}
+
+.addEmployeHead.col-6 span {
+    color: #2B3674;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* 133.333% */
+    letter-spacing: -0.48px;
+}
+
+.exitLogo.col-6 {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.exitLogo.col-6 i {
+    color: #2B3674;
+    font-size: 20px;
+}
+.card.col-12.my-4 {
+    text-align: center;
+    padding: 20px;
+    border-radius: 14px;
+    /* background-image: url(data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%23B2BAD0FF' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e); */
+
+
+}
+
+.card.col-12.my-4 i {
+    color: #4318FF;
+    font-size: 20px;
+}
+
+.card img {
+    height: 120px;
+    width: 123px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.card label {
+    border-radius: 14px;
+    margin: 15px 0px;
+    align-self: center;
+    padding: 9px 15px;
+    width: 150px;
+    background-color: #4318FF;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card label:hover {
+    background-color: #6545f5;
+
+}
+
+.card input {
+    display: none;
+}
+.card.col-12.my-4 .dull {
+    color: #8F9BBA;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    /* 125% */
+    letter-spacing: -0.24px;
+}
+
+.input-heading-important.mb-2 {
+    color: #2B3674;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 14px */
+    letter-spacing: -0.28px;
+}
+
+.input-heading-important.mb-2::after {
+    content: " *";
+    color: red;
+}
+
+.input-heading-important.mb-3 {
+    color: #2B3674;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 14px */
+    letter-spacing: -0.28px;
+}
+
+.input-heading-important.mb-3::after {
+    content: " *";
+    color: red;
+}
+
+.form-select.input {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 12px 15px;
+    color: #000000;
+    border-radius: 16px;
+}
+
+.input.salutation{
+    color: #8F9BBA;
+    
+}
+
+.selectedInput{
+    color: #000000;
+}
+
+
+.form-control.mute {
+    border-radius: 16px;
+    padding-left: 15px;
+    font-size: 12px;
+    padding: 13px;
+    color: #000000;
+}
+
+.form-control.mute::placeholder {
+    color: #949DB9;
+}
+
+#exampleFormControlInput11 {
+    color: #949DB9;
+}
+
+.form-control.p-input {
+    border-radius: 16px;
+    color: #000000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.28px;
+    padding: 13px
+}
+
+.gender-radio {
+    display: flex;
+}
+
+.gender-radio label {
+    color: #2B3674;
+    font-size: 14px;
+    font-style: normal;
+    padding-top: 4px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.28px;
+}
+
+.form-label.heading {
+    color: #2B3674;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 14px */
+    letter-spacing: -0.28px;
+}
+
+.btn.btn-primary.me-md-2 {
+    color: #2B3674;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+}
+
+.btn.btn-primary {
+    background-color: #4318FF;
+    padding: 10px 20px;
+    border-radius: 14px;
+}
+
+.formUpload::-webkit-scrollbar {
+    display: none;
+}
+.cardImageSection input {
+    display: none;
+    
+}
+.cardImageSection label{
+    background-color: #2b0daf;
+    color: #fff;
+    width: 102px;
+    align-items: center;
+    display: flex;
+    /* border: 14px; */
+    border-radius: 20px;
+    padding: 24px 18px;
+    /* text-align-last: center; */
+    height: 25px;
+    /* text-align-last: center; */
+    cursor: pointer;
+}
+.cardImageSection label:hover{
+    background-color: #5436d8;
+}
+/* deleteemployee succesfull */
+.employeeDeletedPopup {
+
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #000000b3;
+    backdrop-filter: blur(5px);
+    border-radius: 14px;
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+.employeeDeletedPopup i {
+    font-size: 40px;
+    color: red;
+
+}
+.okButton.red{
+    background-color: rgb(255, 9, 9);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.okButton.red:hover{
+    background-color: rgb(255, 14, 14);
+    border-radius: 30px;
+}
+
+.employeeDeletedPopup span {
+    color: #2B3674;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+/* OK BUTTON */
+.okButton{
+    color: #FFF;
+    background-color: green;
+    border: none;
+    width: 100px;
+    font-weight: 400;
+    padding: 10px;
+    /* padding: 10px 89px; */
+    align-self: center;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.deletePop {
+    background: white;
+    left: 35%;
+    padding: 23px;
+    flex-direction: column;
+    gap: 20px;
+    top: 34%;
+    display: flex;
+    width: 29%;
+    position: absolute;
+    border-radius: 14px;
+}

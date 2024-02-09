@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- mainSection -->
+        <div class="mainSection col-12">
+            <!-- side bar -->
+            <div class="sideBar col-2">
+                <div class="logo">
+                    <h5>Employee</h5>
+                    <h4>Management</h4>
+                </div>
+                <hr>
+                <div class="dashboardEmployee">
+                    <ul>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-house"></i>
+                                <span>Dashboard</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span>Employees</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span>My Profile</span>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-lock"></i>
+                                <span>Logout</span>
+                            </li>
+                        </a>
+
+                    </ul>
+                </div>
+
+                <div class="sideFooter">
+                    <div class="companyLogo">
+                        <span>Powered by</span>
+                        <img src="images/image 1.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <!-- side bar end -->
+            <div class="employeeList col-10">
+                <div class="userDetailsTop">
+                    <div class="userDetailHeading col-12">
+                        <div class="userLogo col-6">
+                            <span class="firstPara">Dashboard / Employees</span>
+                            <span class="secondPara">Employees</span>
+                        </div>
+                        <div class="userSearchBar col-6">
+                            <div class="search-container">
+                                <input type="text" placeholder="Search" id="searchInput" onkeyup="searchInput()">
+                                <i class="fa-regular fa-bell"></i>
+                                <div class="userImg">
+                                    <img src="images/7d3e8987-abeb-463b-b272-99464c9c1dce.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="userDetailscomplex">
+                        <div class="listCount-Button col-12">
+                            <div class="listCount col-6">
+                                <span>Employees List</span>
+                                <select class="form-select" id="employeeNumber" aria-label="Default select example">
+                                    <option selected value="5">5</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                </select>
+                                <h6 id="employeeTotal" >of 5</h6>
+                            </div>
+                            <div class="filledButton col-6">
+                                <button type="button" class="filledBtn" onclick="addEmployeeToggle()">Add
+                                    Employee</button>
+                            </div>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sl.No<i class="fa-solid fa-chevron-down"></i></th>
+                                    <th>Name<i class="fa-solid fa-chevron-down"></i></th>
+                                    <th>Email<i class="fa-solid fa-chevron-down"></i></th>
+                                    <th>Phone<i class="fa-solid fa-chevron-down"></i></th>
+                                    <th>Gender<i class="fa-solid fa-chevron-down"></i></th>
+                                    <th>DOB<i class="fa-solid fa-chevron-down"></i></th>
+                                    <th>Country<i class="fa-solid fa-chevron-down"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody class="tableata" id="tableData"></tbody>
+                        </table>
+                        <!-- employee not foundddd -->
+                        <div class="employeeNotFound" id="employeeNotFound">
+                            <i class="fa-solid fa-ban"></i>
+                            <span>Employee not found !</span>
+                        </div>
+                    </div>
+                    <!-- <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav> -->
+                    <div class="pagination_content pt-1">
+                        <div class="pagination" id="pagination">
+                            <a id="pageleft">&lt;</a>
+                            <div class="pagination" id="Page_Num_Btns"></div>
+                            <a  id="pageright">&gt;</a>
+                        </div>
+                   </div>
+
+                </div>
+                <div class="userDetailsFooter">
+                    <div class="rightsReserved">
+                        <span>© 2023 All Rights Reserved. <b>Stackup</b></span>
+                    </div>
+                    <div class="termsAndPrivacy">
+                        <div class="terms">
+                            <span>Terms of Use</span>
+                        </div>
+                        <div class="privacyPolicy">
+                            <span>Privacy Policy</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- drop down button start -->
+    <div class="buttonDropDown" id="buttonDropDown">
+        <ul>
+            <a href="#" id="viewButton">
+                <li>
+                    <i class="fa-solid fa-eye"></i>
+                    <span>View Details</span>
+
+                </li>
+            </a>
+            <a href="#" id="editButton" onclick="editEmployee(),dropDownTOggleClose()">
+                <li>
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Edit</span>
+
+                </li>
+            </a>
+            <a href="#" onclick="deleteEmployeePopUp(),dropDownTOggleClose()">
+                <li id="deleteEmployeeBtn">
+                    <i class="fa-solid fa-trash"></i>
+                    <span>Delete</span>
+
+                </li>
+            </a>
+
+        </ul>
+    </div>
+
+    <!-- form upload start -->
+    <div class="formUpload" id="addEmployeeForm">
+        <div class="header">
+            <div class="addEmployeForm col-12">
+                <div class="addEmployeHead col-6">
+                    <span>Add Employee</span>
+                </div>
+                <div class="exitLogo col-6">
+                    <button type="button" class="btn-close" onclick="closebutton(),clearForm()" aria-label="Close"></button>
+    
+                </div>
+    
+            </div>
+        </div>
+        <div class="formContent">
+            <div class="card col-12 my-4">
+                <!-- <i class="fa-solid fa-upload"></i> -->
+                <!-- <span>Upload Image</span> -->
+                <img src="images/profile.png" id="employeeProfilePic">
+                <label for="inputimage">Upload Image</label>
+                <input type="file" accept="image/*" id="inputimage">
+                <!-- <button type="button" class="imageUploadButton col-3 my-3">Upload Image</button> -->
+                <span class="dull">PNG, JPG files are allowed</span>
+                <p id="inputimageNull"></p>
+    
+            </div>
+            <div class="row py-2 first-row">
+                <div class="col-3">
+                    <label for="text" class="input-heading-important mb-2">Salutation </label>
+                    <select class="form-select input salutation" id="salutation" aria-label="Default select example">
+                        <option selected="">select</option>
+                        <option class="selectedInput" value="Mr">Mr</option>
+                        <option class="selectedInput" value="Mrs">Mrs</option>
+                        <option class="selectedInput" value="Ms">Ms</option>
+                    </select>
+                    <p id="salutationNull"></p>
+                </div>
+                <div class="col-4">
+                    <label for="text" class="input-heading-important mb-2">First Name </label>
+                    <input class="form-control mute" type="text" id="firstName" placeholder="John"
+                        aria-label="default input example">
+                    <p id="firstNameNull"></p>
+                </div>
+                <div class="col-5">
+                    <label for="text" class="input-heading-important mb-2">Last Name </label>
+                    <input class="form-control mute" id="lastName" type="text" placeholder="doe"
+                        aria-label="default input example">
+                        <p id="lastNameNull"></p>
+                </div>
+    
+            </div>
+            <div class="row py-2 second-row">
+                <div class="col-6">
+    
+                    <label for="exampleFormControlInput1" class="input-heading-important mb-2">Email address
+                    </label>
+                    <input type="email" class="form-control mute" id="email" placeholder="mail@simmmple.com">
+                    <p id="emailNull"></p>
+    
+    
+                </div>
+                <div class="col-6">
+                    <label for="text" class="input-heading-important mb-2">Mobile Number </label>
+                    <input class="form-control mute" id="mobileNumber" type="text" placeholder="enter mobile number"
+                        aria-label="default input example">
+                        <p id="mobileNumberNull"></p>
+    
+                </div>
+            </div>
+            <div class="row py-2 third-row">
+                <div class="col-6">
+                    <label for="text" class="input-heading-important mb-2">Date of Birth </label>
+                    <input type="date" class="form-control p-input" id="dateOfBirth" placeholder="select date of birth">
+                    <p id="dateOfBirthNull"></p>
+                </div>
+                <div class="col-6">
+                    <label for="text" class="input-heading-important mb-3">Gender </label>
+                    <div class="gender-radio">
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Gender" value="male"
+                                    id="addMale">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Male
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Gender" value="Female"
+                                id="addFemale">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Female
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <p id="nullGender"></p>
+                </div>
+    
+            </div>
+            <div class="row py-2">
+                <div class="col-12">
+                    <label for="text" class="input-heading-important mb-2">Qualifications </label>
+                    <input class="form-control mute" id="qualification" type="text" placeholder="enter qualifications"
+                        aria-label="default input example">
+                        <p id="qualificationNull"></p>
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-12">
+                    <label for="text" class="input-heading-important mb-2">Address </label>
+                    <input class="form-control mute" id="address" type="text" placeholder="enter address"
+                        aria-label="default input example">
+                </div>
+                <p id="addressNull"></p>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">
+    
+                    <label for="exampleFormControlInput1" class="input-heading-important mb-2">Country </label>
+                    <select class="form-select input" id="country" aria-label="Default select example">
+                        <option selected="">select country</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="USA">USA</option>
+                    </select>
+    
+                    <p id="countryNull"></p>
+                </div>
+                <div class="col-6">
+                    <label for="text" class="input-heading-important mb-2">State </label>
+                    <select class="form-select input" id="state" aria-label="Default select example">
+                        <option selected="">select state</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="TamilNadu">TamilNadu</option>
+                        <option value="Hainan">Hainan</option>
+                    </select>
+                    <p id="stateNull"></p>
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">
+    
+                    <label for="exampleFormControlInput1" class="input-heading-important mb-2">City </label>
+                    <input class="form-control mute" id="city" type="text" placeholder="enter city"
+                        aria-label="default input example">
+    
+                        <p id="cityNull"></p>
+                </div>
+                <div class="col-6">
+                    <label for="text" class="input-heading-important mb-2">Pin/Zip </label>
+                    <input class="form-control mute" id="pin" type="text" placeholder="enter zip/pin"
+                        aria-label="default input example">
+                        <p id="pinNull"></p>
+                </div>
+            </div>
+            <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" type="button" onclick="closebutton() ">Cancel</button>
+                <button class="btn btn-primary" id="addEmployeeSubmitBtn" type="button">Add
+                    Employee</button>
+                </div>
+    
+                <!-- addEmployeeForm(); closebutton();clearForm(); -->
+    
+        </div>
+       
+        
+
+
+    </div>
+    <!-- employee added succesfullyy -->
+    <div class="employeeAddedPopup" id="employeeAddedPopup">
+        <div class="addPop">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <span>Employee added succesfullyy !</span>
+            <button class="okButton" onclick="employeeAddedSuccesfullHide()">OK</button>
+        </div>
+    </div>
+    <!-- employee deleted sussesfully -->
+    <div class="employeeDeletedPopup" id="employeeDeletedPopup">
+        <div class="deletePop">
+            <i class="fa-solid fa-trash"></i>
+            <span>Employee Deleted succesfullyy !</span>
+            <button class="okButton red" onclick="deletePopupHide ()">OK</button>
+        </div>
+    </div>
+
+    <!-- delete employee popup -->
+    <div class="deleteEmployePopup" id="deleteEmployePopup">
+        <div class="col-12">
+            <div class="col-6">
+                <span>Delete Employee</span>
+            </div>
+            <div class="icon col-6">
+                <button type="button" class="btn-close" aria-label="Close" onclick="closebutton()"></button>
+            </div>
+        </div>
+        <p class="my-4">Are you sure you want to delete this employee?</p>
+        <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
+            <button class="btn btn-cancel me-md-2" type="button" onclick="closebutton()">Cancel </button>
+            <button class="btn btn-delete me-md-2" type="button" id="deleteEmployeeId">Delete</button>
+        </div>
+    </div>
+
+    <!-- employee edited succesfull -->
+    <div class="employeeEditedSuccess" id="employeeEditedSuccess">
+        <div class="editPop">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span>Employee Edited succesfullyy !</span>
+        </div>
+    </div>
+
+
+    <!-- Edit Employee -->
+
+
+
+    <div class="formEditEmployee" id="editEmployee">
+        <div class="addEmployeForm col-12">
+            <div class="addEmployeHead col-6">
+                <span>Edit Employee</span>
+            </div>
+            <div class="exitLogo col-6">
+                <button type="button" class="btn-close" aria-label="Close" onclick="closebutton()"></button>
+            </div>
+
+        </div>
+        <div class="cardImageSection">
+            <div class="cardImg col-2 my-4">
+                <div class="editEmployeeChangeImage" >
+                    <img id="editEmployeeChangeImage" src="images/Rectangle 346.png" alt="">
+                </div>
+            </div>
+            <label for="editImageInput">Change</label>
+            <input type="file" accept="image/*" id="editImageInput">
+        </div>
+
+
+        <div class="row py-2 first-row">
+            <div class="col-3">
+                <label for="text" class="input-heading-important mb-2">Salutation </label>
+                <select class="form-select input" id="editSalutation" aria-label="Default select example">
+                    <option selected="">select</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                </select>
+                <p id="editSalutationNull"></p>
+            </div>
+            <div class="col-4">
+                <label for="text" class="input-heading-important mb-2">First Name </label>
+                <input class="form-control mute" id="editFirstName" type="text" placeholder="John"
+                    aria-label="default input example">
+                    <p id="editFirstNameNull"></p>
+            </div>
+            <div class="col-5">
+                <label for="text" class="input-heading-important mb-2">Last Name </label>
+                <input class="form-control mute" id="editLastName" type="text" placeholder="doe"
+                    aria-label="default input example">
+                    <p id="editLastNameNull"></p>
+            </div>
+
+        </div>
+        <div class="row py-2 second-row">
+            <div class="col-6">
+
+                <label for="exampleFormControlInput1" class="input-heading-important mb-2">Email address
+                </label>
+                <input type="email" class="form-control mute" id="editEmail" placeholder="mail@simmmple.com">
+                <p id="editEmailNull"></p>
+
+            </div>
+            <div class="col-6">
+                <label for="text" class="input-heading-important mb-2">Mobile Number </label>
+                <input class="form-control mute" id="editMobileNumber" type="text" placeholder="enter mobile number"
+                    aria-label="default input example">
+                    <p id="editMobileNumberNull"></p>
+
+            </div>
+        </div>
+        <div class="row py-2 third-row">
+            <div class="col-6">
+                <label for="text" class="input-heading-important mb-2">Date of Birth </label>
+                <input type="date" class="form-control p-input" id="editDateOfBirth" placeholder="select date of birth">
+                <p id="editDateOfBirthNull"></p>
+            </div>
+            <div class="col-6">
+                <label for="text" class="input-heading-important mb-3">Gender </label>
+                <div class="gender-radio">
+                    <div class="col-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genderEdit" value="male"
+                                id="editMale">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Male
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="genderEdit" value="Female"
+                                id="editFemale">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Female
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <p id="editGenderNull"></p>
+            </div>
+
+        </div>
+        <div class="row py-2">
+            <div class="col-12">
+                <label for="text" class="input-heading-important mb-2">Qualifications </label>
+                <input class="form-control mute" id="editQualification" type="text" placeholder="enter qualifications"
+                    aria-label="default input example">
+                    <p id="editQualificationNull"></p>     
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-12">
+                <label for="text" class="input-heading-important mb-2">Address </label>
+                <input class="form-control mute" id="editAddress" type="text" placeholder="enter address"
+                    aria-label="default input example">
+                    <p id="editAddressNull"></p>   
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-6">
+
+                <label for="exampleFormControlInput1" class="input-heading-important mb-2">Country </label>
+                <select class="form-select input" id="editCountry" aria-label="Default select example">
+                    <option selected="">select country</option>
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                    <option value="USA">USA</option>
+                </select>
+
+                <p id="editCountryNull"></p>  
+            </div>
+            <div class="col-6">
+                <label for="text" class="input-heading-important mb-2">State </label>
+                <select class="form-select input" id="editState" aria-label="Default select example">
+                    <option selected="">select state</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="TamilNadu">TamilNadu</option>
+                    <option value="Hainan">Hainan</option>
+                </select>
+                <p id="editStateNull"></p> 
+
+            </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-6">
+
+                <label for="exampleFormControlInput1" class="input-heading-important mb-2">City </label>
+                <input type="email" class="form-control mute" id="editCity" placeholder="enter city">
+
+                <p id="editCityNull"></p>
+            </div>
+            <div class="col-6">
+                <label for="text" class="input-heading-important mb-2">Pin/Zip </label>
+                <input class="form-control mute" id="editPin" type="text" placeholder="enter zip/pin"
+                    aria-label="default input example">
+                    <p id="editPinNull"></p>
+
+            </div>
+        </div>
+        <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="button" onclick="closebutton()">Cancel</button>
+            <button class="btn btn-primary" type="button" id="saveEditEmployee" onclick="EditFormValidation()">Save Changes</button>
+        </div>
+
+
+
+
+
+    </div>
+    <div class="overlay" id="overlay">
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
